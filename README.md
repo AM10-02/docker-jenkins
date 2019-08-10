@@ -28,7 +28,12 @@ $ docker-compose up -d
 ```bash
 $ docker exec -it docker-jenkins bash
 ```
-抜け出すときは、`exit`で抜け出せます。
+抜け出すときは、`exit`で抜け出せます。  
+rootユーザでログインする場合は、
+```bash
+$ docker exec -u 0 -it docker-jenkins bash
+```
+を使用してください。
 
 ### Jenkinsログの表示
 ```bash
