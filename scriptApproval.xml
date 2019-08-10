@@ -1,0 +1,52 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.62">
+  <approvedScriptHashes>
+    <string>015bc985ad001260f21701d170c3e2abd668d9a5</string>
+    <string>059e05c05d7bc24bf0c0083c0c8fa4f12a5ff669</string>
+    <string>2b329b3499a70eb9721b3d3f2561e932308fbe44</string>
+    <string>2f07723552c4abee39eed0fd68fe66af2c48fe07</string>
+    <string>3e909bd8800ccb1fbfd6e998fef9969fd97bef80</string>
+    <string>4152f5b1a7cd1eefe568707ae1f3cfdc03ef6b40</string>
+    <string>4b1ade76a3d768d7e6b947b6e2f5fc1a07ad32f2</string>
+    <string>527122dbf8bf8ef671049a9c7076d37285d2d4fd</string>
+    <string>5c6708ad1a51b54d2d61c7421cc8b4ae1c90a3aa</string>
+    <string>639d3aeb501adc6a12498f291ab6f2e24a07d9b1</string>
+    <string>72bad3542003addc204756485a8536a18103b92e</string>
+    <string>774b73a2f964c12d2e551fe583c0c43cd17e5a0d</string>
+    <string>963f187613409722081fe94c620bf9c53afad972</string>
+    <string>98716f54b7cc4cbeb4e33e5aae0579b4a91c99a4</string>
+    <string>99aedf3bc4cd57c8a5c3dc1bb782ab43cb0948b3</string>
+    <string>99c2479d1ebdfdd63afbb97150755e5ea8503780</string>
+    <string>99c5548b02f4222dad09f1d72fbfc80a3e30c492</string>
+    <string>9bbd7d6e15f667efb2fdcad8af67e55ac7bd4e4c</string>
+    <string>9e17121140bd07cb2c47b37c08fd8a59994c4e0f</string>
+    <string>a07735d566f3c0d06fc1ad8fedb626eded96179d</string>
+    <string>ac22123e8a89764767f154c25a8aab1b13dc96a7</string>
+    <string>aeea1785f0f3b1e412a61f28a1ed9c51c56195b4</string>
+    <string>b3669b8d8dd7f66b49067b17e9ec29ef00a1f65a</string>
+    <string>b56b1da4cb1a51a1f3051d1e2c633bf4d5c9e9b5</string>
+    <string>c7803bc2bb1cf07a85cf3f2f633b21ab3161bec1</string>
+    <string>d005020e1b2ac4b96efabee6957054821143c525</string>
+    <string>d0e30a1135d582b12763b092e358ed31f54d57db</string>
+    <string>d4898bb89bcab444fb2a768b298c22c3eb7c055c</string>
+    <string>d742d1398d73129918bd31eecd8de4ea7a25bb2f</string>
+    <string>d7cf849a55a038793a8dc62b21d701584759d779</string>
+    <string>e18e3be8bf8aab038847e92634d1630401435f15</string>
+    <string>e32b4ebdc1e8cb72eaf5dd285885057356ab8a55</string>
+    <string>e5638c745624ae1c068399a6b2dd2a967c0ea602</string>
+    <string>e86a0ab64075f59fdb225a2c575cca8911bf6ac4</string>
+    <string>ef189b8cd7997e76b0ae4da200298878a3467edd</string>
+    <string>fd6e63444f3e01be27d047c53279d325fa052f7a</string>
+    <string>fef32e9c80c2d51a822ec71e3f4e59a989f751c8</string>
+  </approvedScriptHashes>
+  <approvedSignatures>
+    <string>method hudson.model.Run getLog</string>
+    <string>method org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper getRawBuild</string>
+    <string>staticMethod hudson.console.ConsoleNote removeNotes java.lang.String</string>
+  </approvedSignatures>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>

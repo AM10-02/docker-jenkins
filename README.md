@@ -6,7 +6,7 @@ macOS上で動作検証しています。
 |アプリなど|バージョン|
 |---|---|
 |macOS|10.14.5|
-|Docker Desktop for Mac|2.1.0.0|
+|Docker Desktop for Mac|2.1.0.1|
 |Jenkins|2.176.2|
 
 ## 使い方

@@ -10,9 +10,9 @@ RUN apt-get update \
 	&& apt-get install -y sudo git ruby make maven
 
 # Jenkinsの設定ファイルのコピー
-COPY config.xml /usr/share/jenkins/ref/
+COPY config.xml /var/jenkins_home/config.xml
+COPY scriptApproval.xml /var/jenkins_home/scriptApproval.xml
 
-COPY jobs/declarative_sample/config.xml /usr/share/jenkins/ref/jobs/declarative_sample/config.xml
-COPY jobs/scripted_sample/config.xml /usr/share/jenkins/ref/jobs/scripted_sample/config.xml
+COPY jobs /usr/share/jenkins/ref/jobs
 
 USER jenkins
