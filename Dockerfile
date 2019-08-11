@@ -14,11 +14,13 @@ RUN apt-get update \
 
 # Jenkinsの設定ファイルのコピー
 # overwriteだと起動時に毎回更新されるため、直接コピーします
-COPY config.xml /var/jenkins_home/config.xml
-COPY jenkins.model.JenkinsLocationConfiguration.xml /var/jenkins_home/jenkins.model.JenkinsLocationConfiguration.xml
-COPY scriptApproval.xml /var/jenkins_home/scriptApproval.xml
-COPY hudson.tasks.Mailer.xml /var/jenkins_home/hudson.tasks.Mailer.xml
+COPY --chown=jenkins:jenkins config.xml ${JENKINS_HOME}/config.xml
+COPY --chown=jenkins:jenkins jenkins.model.JenkinsLocationConfiguration.xml ${JENKINS_HOME}/jenkins.model.JenkinsLocationConfiguration.xml
+COPY --chown=jenkins:jenkins scriptApproval.xml ${JENKINS_HOME}/scriptApproval.xml
+COPY --chown=jenkins:jenkins hudson.tasks.Mailer.xml ${JENKINS_HOME}/hudson.tasks.Mailer.xml
 
 COPY jobs /usr/share/jenkins/ref/jobs
+
+COPY --chown=jenkins:jenkins m2/settings.xml ${JENKINS_HOME}/.m2/settings.xml
 
 USER jenkins
