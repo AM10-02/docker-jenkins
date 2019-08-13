@@ -11,7 +11,13 @@ ENV JAVA_OPTS=-Duser.timezone=Asia/Tokyo
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 RUN apt-get update \
-	&& apt-get install -y sudo git ruby make maven vim
+	&& apt-get install -y sudo git ruby make maven vim locales
+
+# 言語設定
+RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
+ENV LANG="ja_JP.UTF-8" \
+	LANGUAGE="ja_JP:ja" \
+	LC_ALL="ja_JP.UTF-8"
 
 # Jenkinsの設定ファイルのコピー
 # overwriteだと起動時に毎回更新されるため、直接コピーします
