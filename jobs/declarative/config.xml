@@ -14,7 +14,7 @@
         <owner class="com.cloudbees.hudson.plugins.folder.Folder" reference="../../../.."/>
         <name>All</name>
         <description>ここには、Declarative Pipelineのサンプルがあります。&lt;br&gt;&#xd;
-Jenkinsファイルは&lt;a href=&quot;https://github.com/AM10-02/jenkins-sample/tree/develop/declarative&quot;&gt;こちら&lt;/a&gt;を確認してください。</description>
+Jenkinsファイルは&lt;a href=&quot;https://github.com/AM10-02/jenkins-sample/tree/master/declarative&quot;&gt;こちら&lt;/a&gt;を確認してください。</description>
         <filterExecutors>false</filterExecutors>
         <filterQueue>false</filterQueue>
         <properties class="hudson.model.View$PropertyList"/>
