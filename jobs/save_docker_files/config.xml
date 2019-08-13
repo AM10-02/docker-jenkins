@@ -1,0 +1,46 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.33">
+  <actions/>
+  <description>Docker構築用に必要なxmlをtarballで保存します。</description>
+  <displayName>Docker構築用の設定ファイル保存</displayName>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.73">
+    <script>node(&apos;master&apos;) {
+    def configDir = &quot;${WORKSPACE}/configs&quot;
+    sh &quot;mkdir -p ${configDir}&quot;
+
+    sh &quot;&quot;&quot;
+cp -a ${HOME}/config.xml ${configDir}
+cp -a ${HOME}/jenkins.model.JenkinsLocationConfiguration.xml ${configDir}
+cp -a ${HOME}/scriptApproval.xml ${configDir}
+cp -a ${HOME}/hudson.tasks.Mailer.xml ${configDir}
+cp -a ${HOME}/jp.am1002.plugins.FilteredMailConfiguration.xml ${configDir}
+&quot;&quot;&quot;
+
+    // jobsにある全てのconfig.xmlをコピーします
+    dir(&quot;${HOME}/jobs&quot;) {
+        sh &quot;&quot;&quot;
+for config in \$(find . -type f -name &apos;config.xml&apos;)
+do
+    config_dir=${WORKSPACE}/configs/jobs/\$(dirname \${config})
+    mkdir -p \${config_dir}
+    cp -a \${config} \${config_dir}
+done
+&quot;&quot;&quot;
+    }
+
+    // jobsディレクトリをtarで保存します
+    dir(&apos;configs&apos;) {
+        sh &quot;tar cvf ${WORKSPACE}/configs.tar .&quot;
+    }
+    archiveArtifacts &apos;configs.tar&apos;
+    
+    // workspaceを削除します
+    deleteDir()
+}</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
