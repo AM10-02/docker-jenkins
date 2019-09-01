@@ -49,7 +49,7 @@
           </default>
           <int>1</int>
           <string>UTIL_BRANCH</string>
-          <string>develop</string>
+          <string>master</string>
         </tree-map>
       </envVars>
     </hudson.slaves.EnvironmentVariablesNodeProperty>
