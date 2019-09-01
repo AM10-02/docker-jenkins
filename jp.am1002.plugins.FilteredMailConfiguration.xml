@@ -1,4 +1,4 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<jp.am1002.plugins.FilteredMailConfiguration plugin="filterd-email-plugin@1.0-SNAPSHOT">
+<jp.am1002.plugins.FilteredMailConfiguration plugin="filtered-email-plugin@1.0-SNAPSHOT">
   <filter>exsample.jp,exsample.co.jp,exsample.ne.jp</filter>
 </jp.am1002.plugins.FilteredMailConfiguration>
