@@ -64,7 +64,7 @@
         <hudson.plugins.git.extensions.impl.PruneStaleBranch/>
       </extensions>
     </scm>
-    <scriptPath>Jenkinsfile</scriptPath>
+    <scriptPath>scripted/parallel_build/Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
