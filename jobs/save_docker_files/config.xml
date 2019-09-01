@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<flow-definition plugin="workflow-job@2.33">
+<flow-definition plugin="workflow-job@2.34">
   <actions/>
   <description>Docker構築用に必要なxmlをtarballで保存します。</description>
   <displayName>Docker構築用の設定ファイル保存</displayName>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.73">
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.74">
     <script>node(&apos;master&apos;) {
     def configDir = &quot;${WORKSPACE}/configs&quot;
     sh &quot;mkdir -p ${configDir}&quot;
@@ -21,12 +21,13 @@ cp -a ${HOME}/jp.am1002.plugins.FilteredMailConfiguration.xml ${configDir}
     // jobsにある全てのconfig.xmlをコピーします
     dir(&quot;${HOME}/jobs&quot;) {
         sh &quot;&quot;&quot;
-for config in \$(find . -type f -name &apos;config.xml&apos;)
+for config in \$(find . -type f -name &apos;config.xml&apos; -o -name &apos;state.xml&apos;)
 do
     config_dir=${WORKSPACE}/configs/jobs/\$(dirname \${config})
     mkdir -p \${config_dir}
     cp -a \${config} \${config_dir}
 done
+find ${WORKSPACE}/configs -type d -name &apos;branches&apos; | xargs rm -rf
 &quot;&quot;&quot;
     }
 
