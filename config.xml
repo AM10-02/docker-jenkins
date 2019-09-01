@@ -49,7 +49,7 @@
           </default>
           <int>1</int>
           <string>UTIL_BRANCH</string>
-          <string>feature/add_pipeline</string>
+          <string>develop</string>
         </tree-map>
       </envVars>
     </hudson.slaves.EnvironmentVariablesNodeProperty>
