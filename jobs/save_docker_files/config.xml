@@ -18,7 +18,8 @@ cp -a ${HOME}/hudson.tasks.Mailer.xml ${configDir}
 cp -a ${HOME}/jp.am1002.plugins.FilteredMailConfiguration.xml ${configDir}
 &quot;&quot;&quot;
 
-    // jobsにある全てのconfig.xmlをコピーします
+    // jobsにある全てのconfig.xmlとstate.xmlをコピーします
+    // Multibranch Pipelineのブランチごとの設定は削除します
     dir(&quot;${HOME}/jobs&quot;) {
         sh &quot;&quot;&quot;
 for config in \$(find . -type f -name &apos;config.xml&apos; -o -name &apos;state.xml&apos;)

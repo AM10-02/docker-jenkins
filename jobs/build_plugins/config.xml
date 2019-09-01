@@ -13,6 +13,8 @@
       <hudson.model.AllView>
         <owner class="com.cloudbees.hudson.plugins.folder.Folder" reference="../../../.."/>
         <name>All</name>
+        <description>ここでは、プラグインをビルドします。&lt;br&gt;&#xd;
+Multibranch Pipelineを使用して、指定したプラグインの各ブランチに対してビルドを行います。</description>
         <filterExecutors>false</filterExecutors>
         <filterQueue>false</filterQueue>
         <properties class="hudson.model.View$PropertyList"/>
