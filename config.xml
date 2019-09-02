@@ -27,6 +27,11 @@
     <hudson.model.AllView>
       <owner class="hudson" reference="../../.."/>
       <name>all</name>
+      <description>各フォルダ内にパイプラインジョブを作成しています。&lt;br&gt;&#xd;
+詳細は遷移先の説明を参照してください。&lt;br&gt;&#xd;
+&lt;hr&gt;&#xd;
+『Docker構築用の設定ファイル保存』ジョブでは、Dockerで必要な設定ファイルをtarballで保存します。&lt;br&gt;&#xd;
+保存したtarballを使用することで、簡単にDockerの更新をすることが可能です。</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -39,19 +44,5 @@
     <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
   </crumbIssuer>
   <nodeProperties/>
-  <globalNodeProperties>
-    <hudson.slaves.EnvironmentVariablesNodeProperty>
-      <envVars serialization="custom">
-        <unserializable-parents/>
-        <tree-map>
-          <default>
-            <comparator class="hudson.util.CaseInsensitiveComparator"/>
-          </default>
-          <int>1</int>
-          <string>UTIL_BRANCH</string>
-          <string>develop</string>
-        </tree-map>
-      </envVars>
-    </hudson.slaves.EnvironmentVariablesNodeProperty>
-  </globalNodeProperties>
+  <globalNodeProperties/>
 </hudson>
